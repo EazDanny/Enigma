@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Misterio del Detective</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Music Controls -->
+    <div id="musicControls" class="music-controls">
+        <button id="playPauseBtn" class="music-btn">▶️</button>
+        <input type="range" id="volumeSlider" class="volume-slider" min="0" max="100" value="30">
+    </div>
+
+    <!-- Confetti Container -->
+    <div id="confetti" class="confetti-container"></div>
+
+    <!-- Intro Screen -->
+    <div id="intro" class="screen active">
+        <div class="container">
+            <div class="intro-content">
+                <h1 class="title-main">El Misterio del Detective</h1>
+                <p class="subtitle">Un regalo especial te espera...</p>
+                
+                <div class="intro-text">
+                    <p>Querido hermano detective,</p>
+                    <p>Un misterio te espera en este día especial. Cuatro enigmas guardan la llave de tu regalo...</p>
+                    <p>¿Estás listo para resolver los acertijos del pasado y el presente?</p>
+                </div>
+                
+                <button id="startBtn" class="btn btn--elegant">Comenzar la Aventura</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Puzzle Screen -->
+    <div id="puzzleScreen" class="screen">
+        <div class="container">
+            <div class="puzzle-header">
+                <button id="restartBtn" class="btn btn--elegant-outline">Volver al Inicio</button>
+                <div class="puzzle-progress">
+                    Enigma <span id="currentPuzzle">1</span> de 4
+                </div>
+            </div>
+            
+            <div class="puzzle-container">
+                <div class="puzzle-card">
+                    <h2 id="puzzleTitle" class="puzzle-title">Título del Enigma</h2>
+                    
+                    <!-- Puzzle Image (for puzzle 1) -->
+                    <div id="puzzleImage" class="puzzle-image" style="display: none;">
+                        <img src="puzzle-reloj.png" alt="Reloj de Arena Misterioso" />
+                    </div>
+                    
+                    <!-- Puzzle Visual (anchor for puzzle 2) -->
+                    <div id="puzzleVisual" class="puzzle-visual">
+                        <div class="anchor-symbol">⚓</div>
+                    </div>
+                    
+                    <div id="puzzleQuestion" class="puzzle-question">
+                        Pregunta del enigma aparecerá aquí...
+                    </div>
+                    
+                    <div class="puzzle-input">
+                        <input type="text" id="answerInput" class="elegant-input" placeholder="Tu respuesta aquí...">
+                        <button id="submitAnswer" class="btn btn--elegant">Resolver</button>
+                    </div>
+                    
+                    <div id="puzzleHint" class="puzzle-hint">
+                        <div class="hint-header">
+                            <button id="hintButton" class="btn btn--elegant-outline btn--sm">Ver Pista</button>
+                        </div>
+                        <div id="hintText" class="hint-text hint-blurred">Pista del enigma...</div>
+                    </div>
+                    
+                    <div id="puzzleFeedback" class="puzzle-feedback"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final Screen -->
+    <!-- Final Screen -->
+<div id="finalScreen" class="screen">
+    <div class="container">
+        <div class="final-content">
+            <div class="final-image">
+                <img src="lorelei-portada.jpg" alt="Lorelei and the Laser Eyes" />
+            </div>
+            
+            <div class="final-code">
+                <div class="code-label">Tu código de regalo:</div>
+                <div class="code-value">LORELEI-2024</div>
+            </div>
+            
+            <h2 class="final-message">¡Felicidades, detective! Has resuelto todos los enigmas.</h2>
+            
+            <div class="final-text">
+                <p>Tu regalo te espera: <strong>Lorelei and the Laser Eyes</strong></p>
+                <p>Un juego de misterios y puzzles que desafiará tu mente detective.</p>
+                <p>¡Espero que disfrutes esta nueva aventura tanto como disfruté creando este misterio para ti!</p>
+                <p>Con cariño, tu hermano.</p>
+                <p><strong>¡Feliz Cumpleaños David!</strong><br>Tu regalo te espera en la PlayStation Store</p>
+            </div>
+            
+            <button id="playAgainBtn" class="btn btn--elegant">Jugar de Nuevo</button>
+        </div>
+    </div>
+</div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
